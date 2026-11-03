@@ -8,11 +8,6 @@ public class ChangeColor : MonoBehaviour
     public float timeLimitDenise;
     private bool flipswitch;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         timer += Time.deltaTime;
