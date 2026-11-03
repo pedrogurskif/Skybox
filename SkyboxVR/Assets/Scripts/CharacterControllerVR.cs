@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
-public class CharacterControllerCC : MonoBehaviour
+public class CharacterControllerVR : MonoBehaviour
 {
     private CharacterController cc;
     private Camera mcam;
@@ -37,8 +37,6 @@ public class CharacterControllerCC : MonoBehaviour
         currentMoveSpeed = runAction.IsPressed() ? runSpeed : walkSpeed;
         HandleMovement(moveVector);
 
-        Vector2 lookVector = lookAction.ReadValue<Vector2>();
-        HandleCamera(lookVector);
     }
 
     private void HandleCamera(Vector2 lookVector)
@@ -51,7 +49,10 @@ public class CharacterControllerCC : MonoBehaviour
 
     private void HandleMovement(Vector2 moveVector)
     {
-        Vector3 moveDirection = (transform.forward * moveVector.y + transform.right * moveVector.x) * currentMoveSpeed;
+        Vector3 right = Vector3.ProjectOnPlane(mcam.transform.right, Vector3.up).normalized;
+        Vector3 forward = Vector3.Cross(right, Vector3.up);
+
+        Vector3 moveDirection = (forward * moveVector.y + right * moveVector.x) * currentMoveSpeed;
 
         if(cc.isGrounded)
         {
