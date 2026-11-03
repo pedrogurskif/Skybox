@@ -1114,6 +1114,7 @@ MonoBehaviour:
   on: {fileID: 2100000, guid: f72eff147c4bc8e4b8ae6e6d8b775c97, type: 2}
   off: {fileID: 2100000, guid: 635ff8d5d7f7a6c498171b05e3a61d06, type: 2}
   mesh: {fileID: 1719769512}
+  timeLimitDenise: 0.8
 --- !u!1001 &1878876920
 PrefabInstance:
   m_ObjectHideFlags: 0

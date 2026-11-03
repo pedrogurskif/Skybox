@@ -5,6 +5,7 @@ public class ChangeColor : MonoBehaviour
     public Material on, off;
     public MeshRenderer mesh;
     private float timer;
+    public float timeLimitDenise;
     private bool flipswitch;
 
     void Start()
@@ -15,7 +16,7 @@ public class ChangeColor : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer >= 0.8f)
+        if(timer >= timeLimitDenise)
         {
             Flip();
         }
