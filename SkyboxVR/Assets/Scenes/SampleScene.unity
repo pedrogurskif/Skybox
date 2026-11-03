@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8436642203543228120, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -705,6 +705,10 @@ PrefabInstance:
     - target: {fileID: 8436642203543228120, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
       propertyPath: m_Name
       value: PlayerCharacterController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8436642203543228120, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
