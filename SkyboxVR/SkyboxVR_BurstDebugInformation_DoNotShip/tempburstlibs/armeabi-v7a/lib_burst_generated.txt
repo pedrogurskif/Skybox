@@ -10,7 +10,6 @@ Library: D:\Skybox\SkyboxVR\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst
 --target-framework=NetFramework
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Skybox\SkyboxVR\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Skybox\SkyboxVR\Library\Burst
 --output=D:\Skybox\SkyboxVR\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
@@ -126,7 +125,6 @@ Library: D:\Skybox\SkyboxVR\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst
 --float-mode=Fast
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=D:\Skybox\SkyboxVR\Temp\Burst
---debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.3.9f1/Editor/Data/PlaybackEngines/AndroidPlayer
 --decode-folder=D:\Skybox\SkyboxVR\Library\Burst
 --output=D:\Skybox\SkyboxVR\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
