@@ -36,7 +36,7 @@ public class CharacterControllerVR : MonoBehaviour
         Vector2 moveVector = moveAction.ReadValue<Vector2>();
         currentMoveSpeed = runAction.IsPressed() ? runSpeed : walkSpeed;
         HandleMovement(moveVector);
-
+        HandleCamera(lookAction.ReadValue<Vector2>());
     }
 
     private void HandleCamera(Vector2 lookVector)
