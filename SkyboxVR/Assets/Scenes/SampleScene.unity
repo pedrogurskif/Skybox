@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3077948898303168190, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bb1dbeb938656d3438fdc8e67c8f3d62, type: 2}
     - target: {fileID: 4575400082757297245, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: timeLimit
       value: 0.8
@@ -225,6 +229,74 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 494965899}
   m_SourcePrefab: {fileID: 100100000, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+--- !u!1 &210635710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 210635712}
+  - component: {fileID: 210635711}
+  m_Layer: 0
+  m_Name: TV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &210635711
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210635710}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: a7a259823c3892f4e923dcaaa7f06c22, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 453635861}
+  m_TargetTexture: {fileID: 8400000, guid: f60ec62340324574ebf092611603af42, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_TimeUpdateMode: 2
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
+--- !u!4 &210635712
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210635710}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8946, y: 33.14867, z: 3.09194}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +589,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2790681864291910232, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
   m_PrefabInstance: {fileID: 453635854}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &453635861 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 524357544792900034, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
+  m_PrefabInstance: {fileID: 453635854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &494965893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 471500095970320163, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
@@ -561,11 +638,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
   mat:
-  - {fileID: 2100000, guid: f72eff147c4bc8e4b8ae6e6d8b775c97, type: 2}
-  - {fileID: 2100000, guid: 772913ebf26c9c149b639f8d0958240f, type: 2}
+  - {fileID: 2100000, guid: fd422c80dec997e47844410edcaefcc6, type: 2}
+  - {fileID: 2100000, guid: aa06aee0a6132e943abbc03cadb3d06d, type: 2}
+  off: {fileID: 2100000, guid: bb1dbeb938656d3438fdc8e67c8f3d62, type: 2}
   changeAuto: 0
   mesh: {fileID: 494965896}
   timeLimit: 0
+  glitchFreq: 3
+  glitchDuration: 0.03
+  glitchIndex: 1
 --- !u!1 &572992689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1644,7 @@ SceneRoots:
   - {fileID: 1446708700}
   - {fileID: 1395669975}
   - {fileID: 9433460}
+  - {fileID: 210635712}
   - {fileID: 572992691}
   - {fileID: 1450948778}
   - {fileID: 1839160524}
