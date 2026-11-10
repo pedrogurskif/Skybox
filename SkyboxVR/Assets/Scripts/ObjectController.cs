@@ -51,7 +51,6 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void Start()
     {
-        _startingPosition = transform.parent.localPosition;
         _myRenderer = GetComponent<Renderer>();
         SetMaterial(false);
     }
@@ -87,7 +86,7 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerEnter()
     {
-        Debug.Log("a");
+        Debug.Log("enter");
         SetMaterial(true);
     }
 
@@ -96,7 +95,7 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerExit()
     {
-        Debug.Log("b");
+        Debug.Log("exit");
         SetMaterial(false);
     }
 
@@ -106,8 +105,8 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerClick()
     {
-        Debug.Log("c");
-        ahh.Flip();
+        Debug.Log("click");
+        ahh.TogglePower();
     }
 
     /// <summary>
