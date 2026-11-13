@@ -4,6 +4,7 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
     public ChangeColor tv;
+    public TextSwitch txt;
 
 
     public void OnPointerEnter()
@@ -19,6 +20,7 @@ public class ObjectController : MonoBehaviour
     public void OnPointerClick()
     {
         Debug.Log("click");
+        txt.SwitchText();
         tv.Swap();
     }
 

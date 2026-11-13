@@ -13,10 +13,10 @@ public class ChangeText : MonoBehaviour
     void Update()
     {
         timer+=Time.deltaTime;
-        if(timer>1)
+        if(timer>0.5f*Time.timeScale)
         {
             timer = 0;
-            count += varb;
+            count += varb*Time.timeScale;
             texto.text = count.ToString();
         }
         if(Time.timeScale == 100 && corout == null)
@@ -27,17 +27,17 @@ public class ChangeText : MonoBehaviour
 
     private IEnumerator changeCountFreq()
     {
-        yield return new WaitForSeconds(1*Time.deltaTime);
+        yield return new WaitForSeconds(1*Time.timeScale);
         varb = 3f;
-        yield return new WaitForSeconds(1*Time.deltaTime);
+        yield return new WaitForSeconds(1*Time.timeScale);
         varb = 10f;
-        yield return new WaitForSeconds(1*Time.deltaTime);
+        yield return new WaitForSeconds(1*Time.timeScale);
         varb = 1231f;
-        yield return new WaitForSeconds(1*Time.deltaTime);
+        yield return new WaitForSeconds(1*Time.timeScale);
         varb = 76538f;
-        yield return new WaitForSeconds(1*Time.deltaTime);
+        yield return new WaitForSeconds(1*Time.timeScale);
         varb = 456874f;
-        yield return new WaitForSeconds(1*Time.deltaTime);
+        yield return new WaitForSeconds(1*Time.timeScale);
         varb = 1f;
     }
 }

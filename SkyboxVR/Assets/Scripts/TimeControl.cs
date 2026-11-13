@@ -21,7 +21,6 @@ public class TimeControl : MonoBehaviour
             Time.timeScale = times[i];
             i++;
         }
-        i++;
         yield return new WaitForSeconds(intervals[i]*Time.timeScale); //1:15
         SceneManager.LoadScene("SampleScene");
         
