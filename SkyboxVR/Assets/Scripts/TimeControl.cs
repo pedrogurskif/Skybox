@@ -1,12 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class TimeControl : MonoBehaviour
 {
-    public float count = 1;
-    public TextMeshPro texto;
+    public float[] intervals;
+    public float[] times;
+    private int i = 0;
     void Start()
     {
         StartCoroutine(changeTime());
@@ -15,18 +15,15 @@ public class TimeControl : MonoBehaviour
 
     private IEnumerator changeTime()
     {
-        yield return new WaitForSeconds(10*Time.timeScale);
-        Time.timeScale = 2;
-        yield return new WaitForSeconds(7*Time.timeScale);
-        Time.timeScale = 3;
-        yield return new WaitForSeconds(7*Time.timeScale);
-        Time.timeScale = 4;
-        yield return new WaitForSeconds(6*Time.timeScale);
-        Time.timeScale = 6;
-        yield return new WaitForSeconds(5*Time.timeScale);
-        Time.timeScale = 7;
-        yield return new WaitForSeconds(5*Time.timeScale);
-        Time.timeScale = 8;
-
+        while(i<times.Length)
+        {
+            yield return new WaitForSeconds(intervals[i]*Time.timeScale);
+            Time.timeScale = times[i];
+            i++;
+        }
+        i++;
+        yield return new WaitForSeconds(intervals[i]*Time.timeScale); //1:15
+        SceneManager.LoadScene("SampleScene");
+        
     }
 }

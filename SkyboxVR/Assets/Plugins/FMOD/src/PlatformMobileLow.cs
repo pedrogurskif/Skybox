@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 #if UNITY_EDITOR
@@ -46,7 +46,7 @@ namespace FMODUnity
         {
             if (target == BuildTarget.iOS)
             {
-                return PlatformIOS.StaticSupportsAdditionalCpp();
+               return PlatformIOS.StaticSupportsAdditionalCpp();
             }
             else
             {

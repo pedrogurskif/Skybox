@@ -131,7 +131,15 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 941887433793082544, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1683682089783353113, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3077948898303168190, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
@@ -434,7 +442,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6706020404378138559, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2790681864291910232, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
@@ -735,6 +743,7 @@ GameObject:
   - component: {fileID: 708645273}
   - component: {fileID: 708645275}
   - component: {fileID: 708645274}
+  - component: {fileID: 708645276}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -808,8 +817,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -905,6 +914,20 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &708645276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708645272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f0f1ce4a39a43042af4af70f26eae8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChanteText
+  count: 1
+  texto: {fileID: 708645274}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -11084,6 +11107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953193294}
   - component: {fileID: 1953193293}
+  - component: {fileID: 1953193295}
   m_Layer: 0
   m_Name: TimeControl
   m_TagString: Untagged
@@ -11103,8 +11127,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6289d6c0bdda5f46ac7573cace93f61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeControl
-  count: 1
-  texto: {fileID: 708645274}
+  intervals:
+  - 10
+  - 7
+  - 7
+  - 6
+  - 5
+  - 5
+  - 3
+  - 3
+  - 2
+  - 2
+  - 1
+  - 1
+  - 1
+  - 1
+  - 6
+  - 15
+  times:
+  - 2
+  - 3
+  - 4
+  - 6
+  - 7
+  - 8
+  - 10
+  - 12
+  - 15
+  - 25
+  - 30
+  - 40
+  - 70
+  - 100
+  - 1
 --- !u!4 &1953193294
 Transform:
   m_ObjectHideFlags: 0
@@ -11120,6 +11175,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953193295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953193292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1932565940
+      Data2: 1237578653
+      Data3: 496614064
+      Data4: -1094794433
+    Path: event:/timermusic
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &2032133796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 311280173487735481, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
