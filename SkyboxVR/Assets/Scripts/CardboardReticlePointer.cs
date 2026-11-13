@@ -187,7 +187,7 @@ public class CardboardReticlePointer : MonoBehaviour
             {
                 _gazedAtObject?.SendMessage("OnPointerClick");
             }
-        }
+        } 
 
         UpdateDiameters();
     }

@@ -63,10 +63,10 @@ public class CharacterControllerVR : MonoBehaviour
         }
         else
         {
-            verticalSpeed -= gravity * Time.deltaTime;
+            verticalSpeed -= gravity * Time.unscaledDeltaTime;
         }
 
         moveDirection.y = verticalSpeed;
-        cc.Move(moveDirection * Time.deltaTime);
+        cc.Move(moveDirection * Time.unscaledDeltaTime);
     }
 }
