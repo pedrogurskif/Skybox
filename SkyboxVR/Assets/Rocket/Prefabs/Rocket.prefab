@@ -771,10 +771,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94cddb93db8084745af7042afdc53491, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeColor
-  on: {fileID: 2100000, guid: f72eff147c4bc8e4b8ae6e6d8b775c97, type: 2}
-  off: {fileID: 2100000, guid: 635ff8d5d7f7a6c498171b05e3a61d06, type: 2}
+  mat: []
+  changeAuto: 0
   mesh: {fileID: 1121210635565025617}
-  timeLimitDenise: 0.8
+  timeLimit: 0
 --- !u!1 &8343314639460997779
 GameObject:
   m_ObjectHideFlags: 0
