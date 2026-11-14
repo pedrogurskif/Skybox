@@ -11,6 +11,7 @@ public class CharacterControllerVR : MonoBehaviour
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    public float timer = 0f;
 
     private InputAction moveAction, runAction, jumpAction, lookAction;
 
@@ -63,10 +64,10 @@ public class CharacterControllerVR : MonoBehaviour
         }
         else
         {
-            verticalSpeed -= gravity * Time.unscaledDeltaTime;
+            verticalSpeed -= gravity * Time.deltaTime;
         }
 
         moveDirection.y = verticalSpeed;
-        cc.Move(moveDirection * Time.unscaledDeltaTime);
+        cc.Move(moveDirection * Time.deltaTime);
     }
 }
