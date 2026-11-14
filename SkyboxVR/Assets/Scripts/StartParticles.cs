@@ -5,7 +5,7 @@ public class StartParticles : MonoBehaviour
     public ParticleSystem a, b;
     void Start()
     {
-        Debug.Log("aee");
+        Debug.Log("Cena carregada");
         a.Play();
         b.Play();
     }

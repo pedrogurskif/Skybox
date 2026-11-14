@@ -5438,7 +5438,7 @@ GameObject:
   - component: {fileID: 1044957268}
   - component: {fileID: 1044957269}
   m_Layer: 0
-  m_Name: Music
+  m_Name: AnimationController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5481,7 +5481,7 @@ MonoBehaviour:
     Path: event:/Music
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -5504,6 +5504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StartParticles
   a: {fileID: 544313861}
   b: {fileID: 1771472942}
+  eventTime: 5
 --- !u!1 &1395669971
 GameObject:
   m_ObjectHideFlags: 0
