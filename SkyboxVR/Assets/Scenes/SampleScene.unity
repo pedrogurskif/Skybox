@@ -127,6 +127,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 619538718183720021, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.061
+      objectReference: {fileID: 0}
+    - target: {fileID: 619538718183720021, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.054
+      objectReference: {fileID: 0}
+    - target: {fileID: 619538718183720021, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.566
+      objectReference: {fileID: 0}
     - target: {fileID: 2363217878979674117, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: playerCode
       value: 
@@ -134,6 +146,18 @@ PrefabInstance:
     - target: {fileID: 4645959417959288114, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: m_Name
       value: Rocket
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986138000103528065, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.009
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986138000103528065, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.063
+      objectReference: {fileID: 0}
+    - target: {fileID: 5986138000103528065, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.027
       objectReference: {fileID: 0}
     - target: {fileID: 7897885797716219069, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: m_LocalPosition.x
