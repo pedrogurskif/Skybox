@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
@@ -11,9 +12,11 @@ public class CharacterControllerVR : MonoBehaviour
     [SerializeField] private float runSpeed;
     [SerializeField] private float jumpForce;
     [SerializeField] private float gravity;
+    [SerializeField] private float floatingSpeed, floatCD;
     public float timer = 0f;
 
     private InputAction moveAction, runAction, jumpAction, lookAction;
+    private bool floating;
 
     private float currentMoveSpeed, verticalSpeed;
     [SerializeField] private float lookAngle, lookSensivity, lookLimit;
@@ -30,6 +33,7 @@ public class CharacterControllerVR : MonoBehaviour
         runAction = InputSystem.actions.FindAction("Run");
         jumpAction = InputSystem.actions.FindAction("Jump");
         lookAction = InputSystem.actions.FindAction("Look");
+        StartCoroutine(floatTime());
     }
 
     void Update()
@@ -37,7 +41,7 @@ public class CharacterControllerVR : MonoBehaviour
         Vector2 moveVector = moveAction.ReadValue<Vector2>();
         currentMoveSpeed = runAction.IsPressed() ? runSpeed : walkSpeed;
         HandleMovement(moveVector);
-        HandleCamera(lookAction.ReadValue<Vector2>());
+        //HandleCamera(lookAction.ReadValue<Vector2>());
     }
 
     private void HandleCamera(Vector2 lookVector)
@@ -66,8 +70,21 @@ public class CharacterControllerVR : MonoBehaviour
         {
             verticalSpeed -= gravity * Time.deltaTime;
         }
-
-        moveDirection.y = verticalSpeed;
+        if(!floating)
+        {
+            moveDirection.y = verticalSpeed;
+        }
+        else
+        {
+            moveDirection.y = floatingSpeed;
+        }
         cc.Move(moveDirection * Time.deltaTime);
+    }
+
+    private IEnumerator floatTime()
+    {
+        yield return new WaitForSeconds(floatCD);
+        floating = true;
+        yield break;
     }
 }

@@ -870,7 +870,7 @@ GameObject:
   - component: {fileID: 8699936698422239773}
   - component: {fileID: 9067750403491856049}
   - component: {fileID: 7727055664521643039}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,6 +1318,14 @@ PrefabInstance:
     - target: {fileID: 4508696319873668, guid: 20290b65343be774aaef6e2aab97bf69, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198791558892717060, guid: 20290b65343be774aaef6e2aab97bf69, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198791558892717060, guid: 20290b65343be774aaef6e2aab97bf69, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 198791558892717060, guid: 20290b65343be774aaef6e2aab97bf69, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1

@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3077948898303168190, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bb1dbeb938656d3438fdc8e67c8f3d62, type: 2}
     - target: {fileID: 4645959417959288114, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -311,9 +315,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4584190618967817890, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
+      propertyPath: floatCD
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584190618967817890, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
+      propertyPath: floatingSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6991999748341436975, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.251
+      value: -0.303
       objectReference: {fileID: 0}
     - target: {fileID: 6991999748341436975, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
       propertyPath: m_LocalPosition.y
@@ -321,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6991999748341436975, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.246
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6991999748341436975, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
       propertyPath: m_LocalRotation.w
