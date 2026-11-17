@@ -11,13 +11,11 @@ public class ObjectController : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        Debug.Log("enter");
         pointerEnterSound.Play();
     }
 
     public void OnPointerExit()
     {
-        Debug.Log("exit");
         pointerExitSound.Play();
     }
 
