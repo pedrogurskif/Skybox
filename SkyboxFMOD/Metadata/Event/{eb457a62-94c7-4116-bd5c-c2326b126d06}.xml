@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{eb457a62-94c7-4116-bd5c-c2326b126d06}">
 		<property name="name">
-			<value>Interstellar theme (only docking part) No time for caution (by Hans Zimmer)</value>
+			<value>Music</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
