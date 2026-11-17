@@ -413,7 +413,7 @@ MonoBehaviour:
   jumpForce: 8
   gravity: 6.7
   floatingSpeed: 0.5
-  floatCD: 30
+  floatCD: 10
   timer: 0
   lookAngle: 0
   lookSensivity: 0.15

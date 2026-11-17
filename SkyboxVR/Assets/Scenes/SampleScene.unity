@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2363217878979674117, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+      propertyPath: playerCode
+      value: 
+      objectReference: {fileID: 53066915}
     - target: {fileID: 4645959417959288114, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
       propertyPath: m_Name
       value: Rocket
@@ -176,6 +180,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f7cdb77ce1bccd4c99d845ea580ae37, type: 3}
+--- !u!114 &53066915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4584190618967817890, guid: d5f9abfe38113f14b9b7fe326723c437, type: 3}
+  m_PrefabInstance: {fileID: 453635854}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed777b4192d0556459f3eb8f277e7571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterControllerCC
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0

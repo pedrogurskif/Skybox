@@ -33,7 +33,6 @@ public class CharacterControllerVR : MonoBehaviour
         runAction = InputSystem.actions.FindAction("Run");
         jumpAction = InputSystem.actions.FindAction("Jump");
         lookAction = InputSystem.actions.FindAction("Look");
-        StartCoroutine(floatTime());
     }
 
     void Update()
@@ -41,7 +40,10 @@ public class CharacterControllerVR : MonoBehaviour
         Vector2 moveVector = moveAction.ReadValue<Vector2>();
         currentMoveSpeed = runAction.IsPressed() ? runSpeed : walkSpeed;
         HandleMovement(moveVector);
-        //HandleCamera(lookAction.ReadValue<Vector2>());
+        if(Application.platform.Equals(RuntimePlatform.WindowsEditor))
+        {
+            HandleCamera(lookAction.ReadValue<Vector2>());
+        }
     }
 
     private void HandleCamera(Vector2 lookVector)
@@ -70,6 +72,7 @@ public class CharacterControllerVR : MonoBehaviour
         {
             verticalSpeed -= gravity * Time.deltaTime;
         }
+
         if(!floating)
         {
             moveDirection.y = verticalSpeed;
@@ -81,7 +84,7 @@ public class CharacterControllerVR : MonoBehaviour
         cc.Move(moveDirection * Time.deltaTime);
     }
 
-    private IEnumerator floatTime()
+    public IEnumerator floatTime()
     {
         yield return new WaitForSeconds(floatCD);
         floating = true;
